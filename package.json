@@ -1,0 +1,24 @@
+{
+  "name": "js-notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx browser-sync start --server --files './*' --no-open --no-notify --directory"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nithinssabu/js-notes.git"
+  },
+  "keywords": [],
+  "author": "Nithin S. Sabu <dev@nithinssabu.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nithinssabu/js-notes/issues"
+  },
+  "homepage": "https://github.com/nithinssabu/js-notes#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}
