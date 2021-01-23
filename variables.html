@@ -1,0 +1,66 @@
+<body>
+  <script>
+    /**
+     * Summary
+     * - Primitive values are immutable
+     * - Variables are not values
+     * - Variables are like wires
+     * - Values are passed to functions, not variable
+     */   
+
+    /**
+     * Trying to set property on primitive value - in "sloppy" mode
+     */
+    console.log('--- first script ---') 
+    let myVal = true
+    myVal.prop = false // fails silently
+    console.log(myVal) // true - if not in strict mode
+    console.log(myVal.prop) // undefined - if not in strict mode
+  </script>
+  <script>
+    /**
+     * Trying to set property on primitive value - in "strict" mode
+     */
+    'use strict'
+    console.log('--- second script ---') 
+    let myNewVal = true
+    myNewVal.prop = false // throw an error - cannot set property on a primitive value
+    console.log(myNewVal)
+    console.log(myNewVal.prop)
+  </script>
+  <script>
+    /**
+     * Trying to assign value to value
+     */
+    console.log('--- third script ---') // error - will not run - left side should be variable
+    null = 10
+    console.log(null)
+  </script>
+  <script>
+    /**
+     *  Variable do not have type. The value it points to have a type.
+     */
+    let text = "hello world"
+    console.log(typeof(text)) // text does not have type. it will give the type of value that num points to
+
+    /**
+     *  We cannot pass variables to functions. We are passing its value.
+     */
+    // Example passing primitive value
+    const changeText = (s) => {
+      s = "bye world"
+    }
+    console.log(text) // hello world
+    changeText(text) // we pass the value, not the variable
+    console.log(text) // hello world - because we passed the value
+
+    // Example passing non-primitive value
+    const changeObj = (o) => {
+      o[0] = "bye"
+    }
+    let obj = ["hello", "world"]
+    console.log(obj) // ["hello", "world"]
+    changeObj(obj) // we pass the value, not the variable
+    console.log(obj) // ["bye", "world"] - because we passed a non-primitive value
+  </script>
+</body>

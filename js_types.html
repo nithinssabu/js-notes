@@ -1,0 +1,26 @@
+<body>
+    <script> 
+      /**
+       * Summary
+       * - Two categories: primitive, objects & functions
+       */
+
+       // primitive
+       console.log(typeof(null)) // object - typeof lies, the real type is null - intentionally missing value
+       console.log(typeof(undefined)) // undefined - unintentionally missing values
+       console.log(typeof(myVal)) // undefined
+       console.log(typeof(3)) // number
+       console.log(typeof(0 === 1)) // boolean
+       console.log(typeof('hello')) // string
+       console.log(typeof(Symbol())) // symbol - used to hide implementation details
+       console.log(typeof(10n)) // bigint - used for math on big numbers
+
+       // objects & functions
+       console.log(typeof(() => {})) // function - used to refer to code
+       console.log(typeof({})) // object - used to group releated data and code
+       console.log(typeof([])) // object
+       console.log(typeof(new Date())) // object
+       console.log(typeof(/bac/)) // object
+
+    </script>
+</body>
